@@ -1,0 +1,757 @@
+/* styles the navigation class by setting the width to be 100% so its responsive, the height to 30px to allow for 
+spacing between the elements, centers the text to the middle, sets the font to the google api font squada one, sets 
+the font size and adds padding to the top and bottom of the navigation. The background colour is set along with a slightly 
+opace display which allows the user to see the information behind it. The position is set to sticky which makes it stick 
+to the top of the screen through the top 0 */
+.navigation {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: 'Squada One', cursive;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: rgba(233, 217, 228, 0.849);
+    position: sticky;
+    top: 0;
+}
+
+/* styles the unordered list as a whole by removing the margin on both sides as well as the padding, the list style is set to
+none to remove the bullet points which are automatically styled */
+.navigation ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+
+/* styles the navigation list element by centering them using inline block display and adding padding of 10px
+each side of the element to create spacing */
+.navigation ul li {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+/* when the navigation list item is hovered over the background colour will change to the below rgba */
+.navigation ul li:hover {
+   background-color: rgba(189, 187, 192, 0.438);
+ }
+ 
+/* sets the navigations link elements within the list element to the colour black and sets the text decoration to none
+which removes the automatic hyperlink deisgn put onto links */
+.navigation ul li a {
+   color: #111 ;
+   text-decoration: none;
+ }
+
+/* when the navigation a links are hovered over the text colour will turn white at a transition speed of 0.3 seconds */
+.navigation a:hover {
+   color: white;
+   transition: 0.3s;
+}
+
+/* when the navigation li class is active a background colour of pink with a low opacity will show so the user
+knows what page they are currently on*/
+.navigation li.active {
+   background-color: rgba(247, 8, 175, 0.1);
+}
+
+/* styles the footer by setting the width to be 100% and the height 30px similar to the navigation bar, the text is alligned
+and the font family set to squada one from the google fonts api, the font size is set and padding put on the top and bottom. 
+The background colour is set to the same as the navigations bars */
+footer {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-family: 'Squada One', cursive;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: rgba(233, 217, 228, 0.849);
+}
+
+/* removes the text decoration on the icons because they are links they are automatically underlined and 
+coloured blue so the colour is set to black */
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+/* when the footer links are hovered over the colour will change to pink */
+footer a:hover {
+    color: rgba(247, 8, 175, 0.849);
+}
+
+/* applies stlying to the body tag by setting the background colour, setting the margin to 0 as it automatically implements
+a border of 8px around the body content. The position is set to relative and the overflow on the x axis is hidden to stop 
+the scroll bar appearing for the background image */
+body {
+    background-color: rgb(243, 243, 235);
+    overflow-x: hidden;
+    margin: 0;
+    position: relative;
+}
+
+/* index.html - about page */
+
+.container {
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* the background image holds the image of the laptop which shows in the background on the homepage. This is done by setting the image position
+as absolute so it stays where it is, the z index sets the position to be the first before any other elements within the page. The opacity 
+is set to 40% so the image isnt as clear, not distracting people from the important information shown on the page. The position is set to the 
+center and the background size to cover the whole page. The background repeat is used for when the image is smaller than the page it will repeat it 
+over and over again, by setting this to no-repeat it wont do this. the url is the image and the width and height are set to 100 vertical width and 
+100% of the height to make it fit the whole screen. */
+.backgroundImage {
+    position: absolute;
+    z-index: -1;
+    opacity: 40%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('images/laptop.jpg');
+    width: 100vw;
+    height: 100%;
+    top: 0;
+}
+
+/* sets the veritcal width of the image inside the class to 100 % of the vertical width so it covers the whole of the screen, this 
+also helps make the page more responsive */
+.backgroundImage img {
+    width: 100vw;
+}
+
+/* the display class sets up a grid display with the template columns to repeat 2, 1 fr, the grid gap is 100px and the grid rows are set 
+to be 200px and automatically implemented when the row overflows. Padding is added to the sides to create appropriate spacing around the 
+grid*/
+.display {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+    grid-auto-rows: minmax(200px, auto);
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+}
+
+/* sets the grid position to column and row 1  */
+.mainText {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* sets the grid position to column 2 and row 1  */
+.profilePicture {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* sets the grid position to column and row 2  */
+.mainText2 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* sets the grid position to column 1 and row 2 */
+.mainTextP {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/* sets the grid position to column 1 and row 3 */
+.mainText3 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+/* styles the main text h1 element by setting the font family to the google api squada one title font, the font size
+to 40px and the font weight to normal, when styling the text without the font weight set to none the text was bolder twice making 
+it look blury, by setting the weight to normal it makes the font look a lot clearer */
+.mainText h1{
+    font-family: 'Squada one',cursive;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+/* sets the p text in the mainText class to oswald my chosen paragraph font from the google api */
+.mainText p {
+    font-family: 'Oswald', cursive;
+}
+
+/* aligns the content of the profilePicture class centeral and vertically aligns it in the middle of the div */
+.profilePicture {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* adds a 15% border radius onto the image within the class */
+.profilePicture img {
+    border-radius: 15%;
+}
+
+/* when the main text h1 element is hovered over the colour is changes to pink and box shadow is added to create an underlining
+deisgn effect, this has a 0.5 transition speed to make it gradual */
+.mainText h1:hover {
+    color: rgba(247, 8, 175, 0.849);
+    box-shadow: 5px 5px;
+    transition: 0.5s;
+}
+
+/* styles the h1 heading in the class by aligning it the center and setting the font family and weight to normal, the font size is also set 
+to the same size as all other headings to make a consistancy throughout the website */
+.mainText2 h1 {
+    text-align: center;
+    font-family: 'Squada one', cursive;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+/* aligns the text right within the p tag in the mainText2 class and sets the font to oswald the google api font  */
+.mainText2 p {
+    text-align: right;
+    font-family: 'Oswald', cursive;
+}
+
+/* when the main text h1 element is hovered over the colour is changes to pink and box shadow is added to create an underlining
+deisgn effect, this has a 0.5 transition speed to make it gradual */
+.mainText2 h1:hover {
+    color: rgba(247, 8, 175, 0.849);
+    box-shadow: 5px 5px;
+    transition: 0.5s;
+}
+
+/* styles the h1 element inside the class by setting the font family to squada one, align the text on the left, set the weight to normal
+and set the font size to 40px */
+.mainText3 h1 {
+    font-family: 'Squada one', cursive;
+    text-align: left;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+/* when the main text h1 element is hovered over the colour is changes to pink and box shadow is added to create an underlining
+deisgn effect, this has a 0.5 transition speed to make it gradual */
+.mainText3 h1:hover {
+    color: rgba(247, 8, 175, 0.849);
+    box-shadow: 5px 5px;
+    transition: 0.5s;
+}
+
+/* the links class is used to set up the grid for the three links, first the text is aligned centrally then the grid is set up. The grid
+has three template columns all are 100px with a 50px grid gap between them. The rows are set to auto row which will be 100p. padding is added 
+to all four of the sides to position them in the correct place, the bakcground colour is then set to make them stand out to the user and 
+contrast from the background image */
+.links {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+    padding-left: 35%;
+    padding-right: 20%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: rgb(243, 243, 235);
+}
+
+/* sets the font family to oswald, the font size to 11px as its a smaller part of the text and sets the background colour to below */
+.link {
+    font-family: 'Oswald', cursive;
+    font-size: 11px;
+    background-color: rgba(189, 187, 192, 0.438);
+}
+
+/* styles the a element inside the link class by removing decoration on the text which is put on as its a link and setting the colour
+of the text to black */
+.link a {
+    text-decoration: none;
+    color: black;
+}
+
+/* changes the font weight to be normal for the h1 element */
+.link a h1 {
+    font-weight: normal;
+}
+
+/* when the link class is hovered over the border radius will change to show a circle shape and the background will turn white,
+this will be done at a transition speed of 0.3 seconds */
+.link:hover {
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: white;
+}
+
+/* when the link a elements are hovered over the colour will change to pink  */
+.link a:hover {
+    color: rgba(247, 8, 175, 0.849);
+}
+
+/* portfolio */
+
+/* the display2 class sets the grid up by setting the display to grid, the columns to 3 and the grid gap to 0px,
+the row is then set to the minmax value of 300px and the text is aligned into the center. Padding is added to the left 
+and right of 20% */
+.display2 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0px;
+    grid-auto-rows: minmax(300px);
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+
+/* styles the text class to set the font to squada one, the paragraph text and the font size to 
+20px */
+.text {
+    font-family: "Squada One";
+    font-size: 20px;
+}
+
+/* the class is set to max width of 100% of the div and the max height of 200px, the overflow is hidden
+and the position is relative to its parent */
+.portfolio-item {
+    max-width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* the image in the portfolio item class is set to opacity 1, is displayed in blocl, the width is 100% and the height
+automatically set to the image size. The transition speed is set to 0.5s and the backface visability hidden. The 
+image will cover the div*/
+.portfolio-item img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    object-fit: cover;
+}
+
+/* when the portfolio image is hovered over the image gets grayscaled */
+.portfolio-item img:hover {
+    filter: grayscale(0.8);
+}
+
+/* styles the middle class by setting a transition speed of 0.5s, the opacity is set to 0 making it disappear out 
+of view, the position is set to absolute to keep it at the exact position, the position is set to 10% at the top
+and left 20%. the background colour is set and the width is set to 100px, and the height 20px */
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background-color: rgba(250, 219, 241, 0.7);
+    width: 100px;
+    height: 20px;
+}
+
+/* when the portfolio item middle text is hovered over the opacity will be set to 1, the colour set to pink and 
+the transition speed is 0.5s  */
+.portfolio-item:hover .middle {
+    opacity: 1;
+    color: rgba(247, 8, 175, 0.849);
+    transition: 0.5s;
+}
+
+/* styles the class by setting the background colour, adding padding to the top and bottom of 20px, aligning the 
+text in the center and adding margins around the right left and bottom to create correct spacing. The background 
+size is set to 50% of the class */
+.colourBackground {
+    background-color: rgba(233, 217, 228, 0.849);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-size: 50%;
+    margin-bottom: 40px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/* styles the h1 inside the heading class by setting the font family to squada one, setting the font weight to normal
+and the font size to 40px which is the heading size for the house style */
+.heading h1 {
+    font-family: 'Squada one', cursive;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+/* contact form */
+
+/* aligns all the containing objects centeral */
+.wrapper {
+    text-align: center;
+}
+
+/* styles the class container by adding padding to the bottom of 3rem, setting the maximum width to 
+400px displaying the display as inline block and setting a mergin of 50px top and bottom and 0 on the sides, the 
+background colour is set to below */
+.contactContainer {
+    padding-bottom: 3rem;
+    max-width: 400px;
+    display: inline-block;
+    margin: 50px 0;
+    background-color: rgba(233, 217, 228, 0.849);
+}
+
+/* styles the h3 tag in the form in the container class by setting the font family to squada one, the font size to 40px
+and the fron weight to normal */
+.contactContainer form h3 {
+    font-family: 'Squada one', cursive;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+/* when the h3 item in the form is hovered over it will change to the colour pink */
+.contactContainer form h3:hover {
+    color: rgba(247, 8, 175, 0.849);
+}
+
+/* styles the h4 tag inside the form inside the container by adding the font family oswald and the font weight
+to normal */
+.contactContainer form h4 {
+    font-family: 'Oswald', cursive;
+    font-weight: normal;
+}
+
+/* styles the fieldset tag which is the fields within the form by adding a medium border, margin to the bottom of 10px
+and setting the minimum width to 70% so when the page is resized it doesnt become thinner and thinner. Setting the width
+to 70% means the field width wont change even if resized. margin is set to auto and padding is set on the left to 
+10px */
+ fieldset {
+	border: medium none;
+	margin-bottom: 10px;
+	min-width: 70%;
+	padding-left: 10px;
+    width: 70%;
+    margin: auto;
+}
+
+/* styles the inputs within the form to inherit the width from its parent, setting a border 1px thick which is solid and 
+the colour, setting the background colour and adding padding around the edge as well as displaying the display
+as inline block and setting the font family to oswald. */
+.input input[type='text'], .input input[type='email'], .input input[type='tel'], .input textarea{
+	width: inherit;
+	border:1px solid #CCC;
+	background:rgb(243, 243, 235);
+    padding: 10px 20px;
+    display: inline-block;
+    font-family: 'Oswald', cursive;
+}
+
+/* the button is styled by adding a background colour, removing the boreder automatically put onto the element,
+aligning it centerally and setting the font family to squada one and the font size to 21px. the cursor allows you 
+to change the style of the cursor, i changed this to pointer so people are aware that it can be pressed */
+button {
+    background-color: rgba(233, 217, 228, 0.849);
+    border: none;
+    text-align: center;
+    font-family: 'Squada One', cursive;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+/* when the button is hovered over the background colour is changed and the text colour to white, the 
+transition speed is set to 0.3s */
+button:hover {
+    background-color: rgba(189, 187, 192, 0.438);
+    color: white;
+    transition: 0.3s;
+}
+
+/* cv page  */
+
+/* styles the h1 tag inside the title class by setting the font family to squada one, the font weigth to normal
+and the font size to 40px. The text is aligned in the center and a margin of 1rem is added to the bottom */
+.title h1 {
+    font-family: 'Squada One', cursive;
+    font-weight: normal;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* when the h1 in the title class is hovered over the colour changes to pink with an alpha value */
+.title h1:hover {
+    color: rgba(247, 8, 175, 0.849);
+}
+
+/* the class holds the grid display and sets the column to repeat 2 with 1fr, the grid gap is 0 to keep the
+contents next to each other, the grid rows are 100px minmax and are automatically implimented. Padding is added 
+on the top and bottom. The max width is set to 40% and the margin is set to auto  */
+.containerGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px;
+    grid-auto-rows: minmax(100px, auto);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    max-width: 40%;
+    margin: auto;
+}
+
+/* styles the h3 tag inside the class by setting the margin start to 2px and margin end aswell*/
+.containerGrid h3 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+}
+
+/* styles the paragraph tag inside the class by setting the margin start to 2px and margin end 15px */
+.containerGrid p {
+    margin-block-start: 2px;
+    margin-block-end: 15px;
+}
+
+/* styles the section1 class by setting the position within the grid to column 1 and row 1 to 5, the background
+colour to rgba below and adding padding to the right, left and bottom to create appropriate spacing */
+.section1 {
+    grid-column: 1 ;
+    grid-row: 1/5;
+    background-color: rgba(166, 164, 168, 0.438);
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 20px;
+}
+
+/* styles the h3 tag inside the class by setting the font family to squada one, the paragraph font, the font weight to normal
+the font size to 30px and aligning the text to the center. Padding is also added to the bottom of 10px */
+.section1 h3 {
+    font-family: 'Squada One',cursive;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* styles the class image cv by aligning the text in the center, adding padding to the bottom and top of 1 rem to
+add appropriate spacing, the width is set to 100% of the page */
+.imageCV {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+/* styles the paragraph text in class by setting the font family to oswald and setting the font size to 14px */
+.contactDetails p {
+    font-family: 'Oswald',cursive;
+    font-size: 14px;
+}
+
+/* styles the contact section  */
+.contact {
+    text-align: center;
+    font-family: 'Oswald', cursive;
+    font-size: 14px;
+}
+
+/* styles the icon class by aligning text into the center, setting the font size to 25px and adding 1 rem of padding 
+on the top */
+.icons {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 1rem;
+}
+
+/* when the icons are hovered over they will turn a pink colour */
+.icons i:hover {
+    color: rgba(247, 8, 175, 0.849);
+}
+
+/* styles the section2 class by positioning it within the grid by assigning it to grid column 2 and grid row 1/5,
+the background colour is then set to the same colour used within the navigation, the font family is set to the header font
+squada one. Padding is then added for 1 rem to the right and the left and 20px to the bottom of the class */
+.section2 {
+    grid-column: 2 ;
+    grid-row: 1/5;
+    background-color: rgba(189, 187, 192, 0.438);
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 20px;
+    font-family: 'Squada One', cursive;
+}
+
+/* styles the h1 text within the section 2 class by setting the font weight to normal, setting the font size to 40px
+sets the text to align in the center and a 10px margin along the bottom.  */
+.section2 h1 {
+    font-weight: normal;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* sets the h3 font weight to normal to combat the fuzzy looking font when its not set to normal */
+.section2 h3 {
+    font-weight: normal;
+}
+
+/* sets the paragraph text in the section 2 class to the font familt oswald and the font size to 14px */
+.section2 p {
+    font-family: 'Oswald', cursive;
+    font-size: 14px;
+}
+
+/* styles the h3 tag inside the class by setting the font family to squada one setting the font weight to normal and the font 
+size to 30px, padding is set to 0. */
+.cvParts h3 {
+    font-family: 'Squada One', cursive;
+    font-weight: normal;
+    font-size: 30px;
+    padding: 0;
+}
+
+/* styles the paragraph tag by setting the font family to oswald */
+.cvParts p {
+    font-family: 'Oswald', cursive;
+}
+
+/* styles the list items in the unordered list in the class by setting the font family to oswald the paragraph font
+for the document, setting the weight to normal and the font size to 14px */
+.cvParts ul li {
+    font-family: 'Oswald', cursive;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* styles the unordered list in the class by adding padding inline start of 20px to set the start of the padding 
+20px in rather than the orginal position */
+.cvParts ul {
+    padding-inline-start: 20px;
+}
+
+/* styles the section 3 class by first setting up its grid position, this is done by setting the column to 1/3
+and the row to 5/6. The background colour is then set and the font family is Squada one the websites heading font
+from the google api. Padding is used to add spacing to the right, left and bottom. The line height has been set to
+20px to stop the large gap between each list item which effected the look of the information */
+.section3 {
+    grid-column: 1 / 3 ;
+    grid-row: 5 / 6 ;
+    background-color: rgba(189, 187, 192, 0.438);
+    font-family: 'Squada One', cursive;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 15px;
+    line-height: 20px;
+}
+
+/* styles the h3 element inside the section 3 by setting the font weight to normal, setting the font size to 30px
+and adding 1 rem of padding on the top of the class creating reasonal spacing */
+.section3 h3 {
+    font-weight: normal;
+    font-size: 30px;
+    padding-top: 1rem;
+}
+
+/* styles the unordered list in section 3 by setting the font family to oswald the google fonts api and sets
+the font size to 14px, the same as all the other paragraph text. */
+.section3 ul {
+    font-family: 'Oswald',cursive;
+    font-size: 14px;
+
+}
+
+/* the media query is set so when the height gets to 1188px the height of the container class will change to 87 of the vertical height of
+the screen, this stops the elongating of the page when the screen gets wider so the height moves down also. */
+@media only screen and (min-height: 1188px) {
+    .container {
+        height: 87vh;
+    }
+}
+
+/* creates a media query for a tablet version of the site at the breaking point 1023, so when the screen is under
+this width it will style the elements by changing the following; */
+@media only screen and (max-width: 1023px) {
+    /* sets the width of the display grid to 70% and centers the content through using margin auto, change padding
+    on the left and the right to 0 to remove it */
+    .display {
+        max-width: 70%;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* stlyes the image inside the maintextp class by setting the width to 100%*/
+    .mainTextP img {
+        width: 100%;
+    }
+
+    /* adds 25% padding to the left of the links class */
+    .links {
+        padding-left: 25%
+    }
+
+    /*sets the container grid class to a max width of 70%*/
+    .containerGrid {
+        max-width: 70%;
+    }
+}
+
+/* creates a media query for a mobile verison of the site at the break point 639px, so when the screen is under 
+this width it will change the layout to the stated below; */
+@media only screen and (max-width: 639px) {
+    /* changes the grid column to only 1 rather than 2 */
+    .display {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* sets the column to 1 and the row to 2 */
+    .profilePicture {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    /* sets the column to 1 and the row to 3 */
+    .mainText2 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    /* sets the column to 1 and the row to 4 */
+    .mainTextP {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    /* sets the column to 1 and the row to 5  */
+    .mainText3 {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    /* removes the padding from the left and right setting it to 0 and sets the grid 10 1 column */
+    .links{
+        padding-left: 0;
+        padding-right: 0;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    /* sets the column position to 1 and resets the width and height to 100px, margin auto centers the class 
+    by adding equal padding on ethier side */
+    .link {
+        grid-column: 1;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+    }
+
+    /* resets the grid display to 1 column and adds a grid gap of 10px between the projects */
+    .display2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+
+    /* sets the portfolio item class to column 1 */
+    .portfolio-item {
+        grid-column: 1;
+    }
+}
